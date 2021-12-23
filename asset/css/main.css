@@ -714,3 +714,67 @@ section.manfaat-kurma{
 .article table tr:nth-child(odd) th{
     background: #EFEFEF;
 }
+
+.product-card{
+    width: 100%;
+    float: left;
+    position: relative;
+    border: 1px solid #efefef;
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align: center;
+}
+.product-card .text{
+    width: 100%;
+    float: left;
+    position: relative;
+    padding-top: 30px;
+    margin-top: 20px;
+}
+.product-card .text::before{
+    content: "";
+    width: calc(100% + 40px);
+    height: 60px;
+    background: url(../images/shadow.png) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+}
+.product-card .text h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+.product-card .text h3 a{
+    color: #333;
+}
+
+.product-page{
+    padding: 80px 0;
+}
+
+.tab-group-bt{
+    width: 100%;
+    float: left;
+}
+.tab-group-bt a{
+    display: inline-block;
+    margin: 0 5px 0 1px;
+    padding: 10px 30px;
+    border: 1px solid #dedede;
+    font-weight: 700;
+    color: #333;
+    transition: var(--anim);
+}
+.tab-group-bt a:hover{
+    border-color: var(--gold);
+}
+.tab-group-bt a.active{
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+.bg-silverlight{
+    background: #f4f4f4;
+}
