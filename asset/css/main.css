@@ -35,17 +35,50 @@ section.hj-header{
     top: 0;
     left: 0;
     z-index: 9;
+    transition: var(--anim);
+    background: rgba(0,0,0,0);
+}
+section.hj-header.sticky{
+    background: #212121;
+    padding: 0;
+    height: 78px;
+}
+section.hj-header.sticky .logo{
+    padding: 10px 0;
+    height: 100px;
+}
+section.hj-header.sticky .logo::before{
+    opacity: 1;
+    top: 0;
 }
 
 .logo{
     width: 200px;
     height: 80px;
     float: left;
+    transition: var(--anim);
+    z-index: 3;
+    position: relative;
 }
 .logo img{
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+.logo::before{
+    content: "";
+    width: 270px;
+    height: 100px;
+    background: url(../images/bg-logo.svg) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: var(--anim);
+
 }
 
 .hj-nav{
@@ -237,7 +270,8 @@ section.hero .bt-group a{
 .ratio-16{
     padding-top: 56.25%;
 }
-.ratio img{
+.ratio img,
+.ratio iframe{
     position: absolute;
     top: 0;
     left: 0;
@@ -840,6 +874,7 @@ section.manfaat-kurma{
 }
 .account-card form label{
     font-size: 13px;
+
 }
 .account-card form a{
     color: var(--gold);
@@ -850,5 +885,113 @@ section.manfaat-kurma{
     float: right;
 }
 
+.p80{
+    padding: 80px 0;
+}
 
+.article-head{
+    width: 100%;
+    float: left;
+}
+.article-head h1{
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+}
+.article-media{
+    width: 100%;
+    float: left;
+}
+.article-media iframe,
+.article-media img{
+    width: 100%;
+}
 
+.share{
+    width: 100%;
+    float: left;
+    border-top: 1px solid #dedede;
+    padding: 20px 0;
+}
+.share h6{
+    float: left;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+.share-bt-group{
+    float: right;
+    text-align: right;
+    margin-top: -10px;
+}
+.share-bt-group a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    margin-left: 6px;
+}
+.share-bt-group a.fb{background: #385398;}
+.share-bt-group a.tw{background: #28A9E2;}
+.share-bt-group a.wa{background: #57F676;}
+.share-bt-group a.ln{background: #137EB7;}
+.share-bt-group a.li{background: #57F676;}
+
+.widget-title{
+    width: 100%;
+    float: left;
+    padding-bottom: 10px;
+    position: relative;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 20px;
+}
+.widget-title h3{
+    font-weight: 700;
+    font-size: 24px;
+    color: #333;
+}
+.widget-title::before{
+    content: "";
+    width: 70px;
+    height: 3px;
+    background: var(--gold);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+
+.post-list{
+    width: 100%;
+    float: left;
+}
+.post-item{
+    width: 100%;
+    float: left;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+}
+.post-item:last-child{
+    border-bottom: none;
+}
+.post-item .pic{
+    width: 136px;
+    float: left;
+}
+.post-item .text{
+    width: calc(100% - 136px);
+    padding-left: 20px;
+    float: left;
+}
+.post-item .text h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+.post-item .text h3 a{
+    color: #333;
+}

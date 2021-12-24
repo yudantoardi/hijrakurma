@@ -8,4 +8,13 @@ $(document).ready(function(){
         $(this).addClass("active");
     });
 
+    $(window).scroll(function(){
+        if ($(window).scrollTop() >= 140) {
+            $('.hj-header').addClass('sticky');
+        }
+        else {
+            $('.hj-header').removeClass('sticky');
+        }
+    });
+
 });
