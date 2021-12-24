@@ -50,8 +50,9 @@ section.hj-header{
 
 .hj-nav{
     width: calc(100% - 400px);
-    float: left;
+    float: right;
     text-align: right;
+    margin-top: 10px;
 }
 .hj-nav li{
     display: inline-block;
@@ -64,10 +65,12 @@ section.hj-header{
     font-weight: 700;
 }
 .hj-profile{
-    width: 200px;
-    float: left;
+    max-width: 200px;
+    float: right;
     text-align: right;
     padding-top: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 .hj-profile img{
     width: 40px;
@@ -175,6 +178,7 @@ section.hero .bt-group a{
     font-size: 16px;
     border-radius: 8px;
     font-weight: 700;
+    border: none;
 }
 .bt.bt-primary{
     background: var(--red);
@@ -521,7 +525,8 @@ section.copyright p{
 }
 
 section.page-cover{
-    height: 360px;
+    min-height: 140px;
+    max-height: 360px;
     padding: 140px 0 80px;
     background: url(../images/page-cover.jpg) no-repeat fixed;
     background-size: cover;
@@ -542,6 +547,7 @@ section.page-cover::before{
     font-size: 96px;
     font-family: var(--alex);
     color: var(--gold);
+    line-height: 100%;
 }
 .hj-breadcrumb{
     text-align: center;
@@ -778,3 +784,71 @@ section.manfaat-kurma{
 .bg-silverlight{
     background: #f4f4f4;
 }
+
+.account{
+    padding: 80px 0;
+}
+.account-card{
+    width: 100%;
+    float: left;
+    border: 1px solid #dedede;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+.account-card .acc-card-cover{
+    width: 36%;
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+.account-card .acc-card-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.account-card form{
+    width: 64%;
+    float: left;
+    margin-left: 36%;
+    padding: 50px;
+}
+.inp-group{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+.account-card form h3{
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+}
+.account-card form p{
+    color: #333;
+    margin-bottom: 0;
+}
+
+.account-card form input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #333;
+}
+.account-card form label{
+    font-size: 13px;
+}
+.account-card form a{
+    color: var(--gold);
+    font-size: 16px;
+    font-weight: 700;
+}
+.float-right{
+    float: right;
+}
+
+
+
