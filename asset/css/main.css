@@ -995,3 +995,133 @@ section.manfaat-kurma{
 .post-item .text h3 a{
     color: #333;
 }
+
+.article table.table-kreasi{
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+}
+.article table.table-kreasi tr th{
+    background: var(--gold);
+}
+.article table.table-kreasi tr td{
+    border-bottom: 1px solid #dedede;
+}
+
+.article ol,
+.article ul{
+    padding-left: 20px;
+}
+.article li{
+    font-size: 16px;
+    color: #333;
+    line-height: 200%;
+}
+.article h5{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.product-media{
+    /*padding-left: 134px;*/
+    position: relative;
+    width: 100%;
+    float: left;
+}
+.product-media .thumb{
+    position: absolute;
+    width: 100%;
+    top: calc(40% + 2px);
+    left: -60%;
+    transform: rotate(90deg);
+}
+.product-media #sync2 .owl-item{
+    transform: rotate(-90deg);
+}
+.product-media #sync2 .item{
+    opacity: 0.5;
+    border: 1px solid #dedede;
+}
+.product-media #sync2 .synced .item{
+    opacity: 1;
+}
+
+#sync1 .owl-prev,
+#sync1 .owl-next{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: calc(50% - 20px);
+    overflow: hidden;
+    text-indent: -200px;
+}
+#sync1 .owl-prev{
+    background: url(../images/prev.png) no-repeat center;
+    left: 20px;
+}
+#sync1 .owl-next{
+    background: url(../images/next.png) no-repeat center;
+    right: 20px;
+}
+
+.row-spacer{
+    width: 100%;
+    float: left;
+    height: 80px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+}
+.overlay.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup{
+    width: calc(100% - 40px);
+    max-width: 886px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.popup-ct{
+    width: 100%;
+    float: left;
+}
+.popup-ct .caption{
+    width: 100%;
+    float: left;
+    background: #212121;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    padding: 10px 20px;
+}
+.popup-ct img{
+    width: 100%;
+    display: block;
+}
+.popup .bt-close{
+    width: 40px;
+    height: 40px;
+    background: var(--red);
+    text-align: center;
+    padding-top: 8px;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}

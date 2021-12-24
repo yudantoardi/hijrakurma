@@ -17,4 +17,19 @@ $(document).ready(function(){
         }
     });
 
+    $(".pop-link").click(function(pl){
+        pl.preventDefault();
+
+        $(".overlay").addClass("show");
+
+        $(".popup-ct img").remove();
+        $(".popup-ct figure").append("<img src='" + $(this).attr("href") + "'>");
+
+        $(".popup-ct .caption p").remove();
+        $(".popup-ct .caption").append("<p>" + $(this).attr("data-caption") + "</p>");
+    });
+    $(".popup .bt-close").click(function(){
+        $(".overlay").removeClass("show");
+    });
+
 });
