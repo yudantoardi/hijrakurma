@@ -339,7 +339,9 @@ section.hero .bt-group a{
 }
 
 .about .section-title h3,
-.about .section-title h2{
+.about .section-title h2,
+.section-title.block h3,
+.section-title.block h2{
     display: block;
 }
 
@@ -1226,6 +1228,85 @@ form a{
     color: #fff;
 }
 
+.pr{
+    position: relative;
+}
+
+.hj-graphic-text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hj-graphic-text .item{
+    width: 400px;
+    position: absolute;
+    transform: translate(-30px,-30px);
+}
+.hj-graphic-text .item:nth-child(1){
+    top: 5%;
+    left: 75%;
+}
+.hj-graphic-text .item:nth-child(2){
+    top: 20%;
+    left: 25%;
+}
+.hj-graphic-text .item:nth-child(3){
+    top: 50%;
+    left: 86%;
+}
+.hj-graphic-text .item:nth-child(4){
+    top: 72%;
+    left: 22%;
+}
+.hjg-icon{
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    float: left;
+    cursor: pointer;
+    transition: var(--anim);
+    opacity: 0.7;
+}
+.hj-graphic-text .item:nth-child(1) .hjg-icon{
+    background: url(../images/superfood.png) no-repeat center;
+    background-size: contain;
+}
+.hj-graphic-text .item:nth-child(2) .hjg-icon{
+    background: url(../images/year.png) no-repeat center;
+    background-size: contain;
+}
+.hj-graphic-text .item:nth-child(3) .hjg-icon{
+    background: url(../images/harvest.png) no-repeat center;
+    background-size: contain;
+}
+.hj-graphic-text .item:nth-child(4) .hjg-icon{
+    background: url(../images/tree.png) no-repeat center;
+    background-size: contain;
+}
+
+.hj-graphic-text .item p{
+    font-size: 18px;
+    width: 320px;
+    padding-left: 20px;
+    float: left;
+    padding: 10px;
+    margin-left: 10px;
+    background: var(--red);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--anim);
+    color: #fff;
+    border-radius: 4px;
+}
+.hj-graphic-text .item:hover .hjg-icon{
+    opacity: 1;
+}
+.hj-graphic-text .item:hover p{
+    opacity: 1;
+}
+
 @media only screen and (max-width: 812px){
     section.hj-header{
         padding: 0;
@@ -1524,6 +1605,36 @@ form a{
         width: 100%;
         padding: 10px 15px;
         margin: 0 0 0 -5px;
+    }
+
+    .hj-graphic-text{
+        width: 100%;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .hj-graphic-text .item{
+        width: 100%;
+        float: left;
+        margin-bottom: 10px;
+        position: relative;
+        transform: translate(0,0);
+        top: auto !important;
+        left: auto !important;
+    }
+    .hj-graphic-text .item p{
+        width: calc(100% - 60px);
+        margin-left: 0;
+        opacity: 1;
+        background: #fff;
+        padding-top: 0;
+        font-size: 14px;
+        color: #333;
+    }
+    .hjg-icon{
+        opacity: 1;
+        width: 50px;
+        height: 50px;
     }
 }
 
