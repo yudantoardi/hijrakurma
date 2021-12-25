@@ -89,6 +89,25 @@ section.hj-header.sticky .logo::before{
 }
 .hj-nav li{
     display: inline-block;
+    position: relative;
+}
+.hj-nav li::before{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    transition: var(--anim);
+}.hj-nav li:hover::before,
+.hj-nav li.active::before{
+    width: 40px;
+}
+.hj-nav li.active a,
+.hj-nav li:hover a{
+    color: var(--gold);
 }
 .hj-nav li a{
     display: block;
@@ -96,6 +115,7 @@ section.hj-header.sticky .logo::before{
     font-size: 14px;
     color: #fff;
     font-weight: 700;
+    transition: var(--anim);
 }
 .hj-profile{
     max-width: 200px;
@@ -507,6 +527,15 @@ section.store{
     padding: 80px 0;
 }
 
+.store-slider .item{
+    padding: 10px;
+}
+.store-slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 section.footer{
     background: #212121;
     padding: 80px 0;
@@ -853,17 +882,17 @@ section.manfaat-kurma{
     float: left;
     margin-bottom: 10px;
 }
-.account-card form h3{
+form h3{
     font-size: 36px;
     font-weight: 700;
     color: #333;
 }
-.account-card form p{
+form p{
     color: #333;
     margin-bottom: 0;
 }
 
-.account-card form input{
+form input{
     width: 100%;
     height: 50px;
     border: 1px solid #dedede;
@@ -872,11 +901,20 @@ section.manfaat-kurma{
     font-size: 16px;
     color: #333;
 }
-.account-card form label{
+form textarea{
+    width: 100%;
+    height: 150px;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #333;
+}
+form label{
     font-size: 13px;
 
 }
-.account-card form a{
+form a{
     color: var(--gold);
     font-size: 16px;
     font-weight: 700;
@@ -1125,3 +1163,368 @@ section.manfaat-kurma{
     transform: translate(-50%,-50%);
     cursor: pointer;
 }
+
+.contact-card{
+    width: 100%;
+    float: left;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #dedede;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.contact-card .left{
+    width: 60%;
+    float: left;
+    padding: 50px;
+}
+.contact-card .right{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    left: 60%;
+    top: 0;
+    background: #212121;
+    padding: 50px;
+}
+.contact-info{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+.contact-info .info-icon{
+    width: 40px;
+    height: 40px;
+    float: left;
+    background: rgba(255,255,255,0.2);
+    color: var(--gold);
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 50%;
+}
+.contact-info p{
+    width: calc(100% - 40px);
+    float: left;
+    padding-left: 20px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    padding-top: 10px;
+}
+
+.for-mobile{
+    display: none;
+}
+
+.burger{
+    width: 60px;
+    height: 60px;
+    float: left;
+    text-align: center;
+    padding-top: 13px;
+    font-size: 24px;
+    display: none;
+    color: #fff;
+}
+
+@media only screen and (max-width: 812px){
+    section.hj-header{
+        padding: 0;
+        background: #212121;
+        height: 60px;
+    }
+    section.hj-header.sticky{
+        height: 60px;
+    }
+    .burger{
+        display: block;
+    }
+    .hj-profile{
+        width: 60px;
+        height: 60px;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .hj-profile span{
+        display: none;
+    }
+    .hj-nav{
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 60px);
+        z-index: 10;
+        background: #111;
+        top: 60px;
+        left: -100vw;
+        overflow-y: auto;
+        transition: var(--anim);
+        margin-top: 0;
+    }
+    .hj-nav.show{
+        left: 0;
+    }
+    .hj-nav li{
+        width: 100%;
+        float: left;
+        text-align: left;
+    }
+    .hj-nav li a{
+        padding-left: 30px;
+    }
+    .logo{
+        width: calc(100% - 120px);
+        float: left;
+    }
+    section.hj-header .logo{
+        height: 60px;
+        padding: 10px 0;
+    }
+    section.hj-header.sticky .logo{
+        height: 60px;
+    }
+    section.hj-header.sticky .logo::before{
+        display: none;
+    }
+
+    .page-cover h2{
+        font-size: 56px;
+    }
+    .hj-breadcrumb li a{
+        font-size: 12px;
+    }
+    section.page-cover{
+        padding: 100px 0 40px;
+    }
+
+    .columns{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .p80{
+        padding: 30px 0;
+    }
+
+    .contact-card .left{
+        width: 100%;
+        padding: 20px;
+    }
+    .contact-card .right{
+        width: 100%;
+        float: left;
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 30px 20px;
+    }
+    form h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 14px;
+    }
+
+    section.hero{
+        height: auto;
+    }
+
+    section.hero .item, 
+    section.hero .columns,
+    section.hero .column{
+        height: calc(100vh - 160px);
+    }
+    section.hero .column{
+        padding-left: 0;
+        padding-right: 0;
+        position: relative;
+    }
+    section.hero .column .text{
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+    }
+
+    section.hero .text h1{
+        font-size: 36px;
+        line-height: 100%;
+    }
+    .bt{
+        height: 48px;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    .strip-1{
+        padding: 40px 0;
+    }
+    .strip-1-card{
+        margin-bottom: 30px;
+    }
+    .strip-1 .column:last-child .strip-1-card{
+        margin-bottom: 0;
+    }
+
+    .section-title h3{
+        font-size: 20px;
+    }
+    .section-title h2{
+        font-size: 56px;
+    }
+    p.fs-18{
+        font-size: 16px;
+        text-align: left;
+    }
+    .hj-graphic .text::before{
+        display: none;
+    }
+    .hj-graphic .column:nth-child(2) .text{
+        padding-right: 20px;
+    }
+    .hj-graphic .column:nth-child(4) .text{
+        padding-left: 20px;
+    }
+    .hj-graphic .text{
+        width: 100%;
+        float: left;
+        text-align: center;
+        background: #efefef;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 8px;
+    }
+    .hj-graphic .text p{
+        font-size: 16px;
+    }
+
+    section.kreasi{
+        padding: 40px 0 80px;
+    }
+    section.kreasi .text h3{
+        font-size: 24px;
+        line-height: 150%;
+        margin-bottom: 10px;
+    }
+    section.kreasi .text h4{
+        font-size: 18px;
+    }
+
+    section.featured{
+        padding-bottom: 40px;
+    }
+    .featured .banner{
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+    }
+
+    .video-list .item,
+    .video-list:hover .item,
+    .video-list .item:hover{
+        width: 100%;
+        margin-top: 0;
+    }
+    .video-list .item .text h4 a{
+        font-size: 18px;
+        line-height: 150%;
+    }
+
+    .recipe-card .text h4{
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    .hero-slider .owl-prev, .hero-slider .owl-next{
+        top: 40%;
+    }
+
+    section.resep-2{
+        padding: 40px 0;
+    }
+    .v-card{
+        margin-bottom: 20px;
+    }
+    
+    .article-ct{
+        width: 100%;
+        float: left;
+    }
+    .article-head{
+        margin-bottom: 20px;
+    }
+    .article-head h1{
+        font-size: 24px;
+    }
+    .bg-silverlight .widget-title.mb-0{
+        margin-bottom: 20px !important;
+    }
+    .hj-card{
+        width: 100%;
+        float: left;
+    }
+
+    .product-media .thumb{
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: rotate(0);
+        margin-top: 2px;
+        margin-bottom: 30px;
+    }
+    .product-media #sync2 .owl-item{
+        transform: rotate(0);
+    }
+
+    .column.is-6-mobile{
+        float: left;
+    }
+    .product-card{
+        margin-bottom: 0;
+    }
+
+    .column.is-4.pl-5{
+        padding-left: 10px !important;
+    }
+    .share{
+        margin-bottom: 30px;
+    }
+    .post-item .pic{
+        width: 80px;
+    }
+    .post-item .text{
+        width: calc(100% - 80px);
+    }
+    .meta-info{
+        font-size: 12px;
+    }
+    .post-item .text h3{
+        font-size: 16px;
+    }
+    .post-item .pic .ratio.ratio-16{
+        padding-top: 100%;
+    }
+
+    .page-cover.pb-0{
+        height: 60px;
+        padding-top: 0;
+        min-height: 0;
+    }
+    .account-card .acc-card-cover{
+        display: none;
+    }
+    .account-card form{
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+    }
+    form a{
+        font-size: 14px;
+    }
+
+    .tab-group-bt a{
+        width: 100%;
+        padding: 10px 15px;
+        margin: 0 0 0 -5px;
+    }
+}
+
+

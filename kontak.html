@@ -46,34 +46,76 @@
             </div>
         </section>
 
-        <section class="page-cover pb-0"></section>
+        <section class="page-cover">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-12 has-text-centered">
+                        <h2>Kontak Kami</h2>
+                        <ul class="hj-breadcrumb">
+                            <li><a href="HOME">HOME</a></li>
+                            <li><a href="#">KONTAK KAMI</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section class="account">
+        <section class="p80">
             <div class="container">
                 <div class="columns is-centered">
-                    <div class="column is-8">
-                        <div class="account-card">
-                            <div class="acc-card-cover">
-                                <img src="asset/images/bank/pic-7.jpg" alt="">
+                    <div class="column is-10">
+                        <div class="contact-card">
+                            <div class="left">
+                                <form action="">
+                                    <h3>Keep in Touch with Us</h3>
+                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus suscipit maximus.</p>
+                                
+                                    <div class="inp-group">
+                                        <input type="text" placeholder="Your Name">
+                                    </div>
+                                    <div class="inp-group">
+                                        <input type="email" placeholder="Your Email">
+                                    </div>
+                                    <div class="inp-group mb-5">
+                                        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                                    </div>
+                                    <div class="inp-group has-text-right">
+                                        <button class="bt bt-primary">SEND MESSAGE</button>
+                                    </div>
+                                
+                                </form>
                             </div>
-                            <form action="">
-                                <h3>Login</h3>
-                                <p class="mb-5">Welcome back! Please enter your username and password to login.</p>
-
-                                <div class="inp-group">
-                                    <input type="email" placeholder="Email address">
+                            <div class="right">
+                                <div class="contact-info">
+                                    <span class="info-icon">
+                                        <i class="fa fa-map-marker"></i>
+                                    </span>
+                                    <p>
+                                        PT Wawasan Satu Konsultan <br>
+                                        Wisma Iskandarsyah A-10 <br>
+                                        Jl. Iskandarsyah Raya Kav. 12-14 <br>
+                                        Jakarta Selatan 12160
+                                    </p>
                                 </div>
-                                <div class="inp-group mb-5">
-                                    <input type="password" placeholder="Password">
-                                    <a href="#" class="float-right mt-1">Forget Password?</a>
+                                <div class="contact-info">
+                                    <span class="info-icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                    <p>customer.service@insightfirstasia.com</p>
                                 </div>
-                                <div class="inp-group has-text-centered mb-5">
-                                    <button class="bt bt-primary">LOGIN</button>
+                                <div class="contact-info">
+                                    <span class="info-icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                    <p>marketing@insightfirstasia.com</p>
                                 </div>
-                                <div class="inp-group has-text-centered mb-0">
-                                    <p>Don't have an account yet? <a href="#">SIGN UP</a> here</p>
+                                <div class="contact-info">
+                                    <span class="info-icon">
+                                        <i class="fa fa-phone"></i>
+                                    </span>
+                                    <p>(0275) 9023456</p>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -145,12 +187,7 @@
     <script>
         $(document).ready(function(){
             
-            $(".hero-slider").owlCarousel({
-                singleItem: true,
-                pagination: true,
-                navigation: true,
-                autoPlay: true
-            });
+            
 
         });
     </script>

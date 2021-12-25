@@ -23,6 +23,9 @@
             <div class="container">
                 <div class="columns">
                     <div class="column is-12">
+                        <div class="burger">
+                            <i class="fa fa-bars"></i>
+                        </div>
                         <a href="#" class="logo"><img src="asset/images/logo-hijra.png" alt=""></a>
                         <div class="hj-profile">
                             <a href="#">
@@ -373,23 +376,16 @@
                     </div>
                 </div>
                 <div class="columns">
-                    <div class="column is-2">
-                        <img src="asset/images/bank/store/store-1.png" alt="">
-                    </div>
-                    <div class="column is-2">
-                        <img src="asset/images/bank/store/store-2.png" alt="">
-                    </div>
-                    <div class="column is-2">
-                        <img src="asset/images/bank/store/store-3.png" alt="">
-                    </div>
-                    <div class="column is-2">
-                        <img src="asset/images/bank/store/store-4.png" alt="">
-                    </div>
-                    <div class="column is-2">
-                        <img src="asset/images/bank/store/store-5.png" alt="">
-                    </div>
-                    <div class="column is-2">
-                        <img src="asset/images/bank/store/store-6.png" alt="">
+
+                    <div class="column is-12">
+                        <div class="store-slider owl-carousel">
+                            <div class="item"><img src="asset/images/bank/store/store-1.png" alt=""></div>
+                            <div class="item"><img src="asset/images/bank/store/store-2.png" alt=""></div>
+                            <div class="item"><img src="asset/images/bank/store/store-3.png" alt=""></div>
+                            <div class="item"><img src="asset/images/bank/store/store-4.png" alt=""></div>
+                            <div class="item"><img src="asset/images/bank/store/store-5.png" alt=""></div>
+                            <div class="item"><img src="asset/images/bank/store/store-6.png" alt=""></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -464,6 +460,14 @@
                 singleItem: true,
                 pagination: true,
                 navigation: true,
+                autoPlay: true
+            });
+
+            $(".store-slider").owlCarousel({
+                items: 6,
+                itemsMobile: [812, 2],
+                pagination: false,
+                navigation: false,
                 autoPlay: true
             });
 

@@ -32,4 +32,9 @@ $(document).ready(function(){
         $(".overlay").removeClass("show");
     });
 
+    $(".burger").click(function(){
+        $(".hj-nav").toggleClass("show");
+        $($(this).children()).toggleClass("fa-times fa-bars");
+    });
+
 });
