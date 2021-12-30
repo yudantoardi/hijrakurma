@@ -1307,7 +1307,25 @@ form a{
     opacity: 1;
 }
 
+.for-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 1366px){
+    section.hero,
+    section.hero .item,
+    section.hero .columns{
+        height: 600px;
+    }
+}
+
 @media only screen and (max-width: 812px){
+    .for-mobile{
+        display: block;
+    }
+    .for-desktop{
+        display: none;
+    }
     section.hj-header{
         padding: 0;
         background: #212121;
